@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player GGvinos</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;800&family=Zen+Kaku+Gothic+Antique:wght@300;900&display=swap");
+      body {
+        background: linear-gradient(5deg, #3846c5, #d93ce7, #23a6d5, #b723d5);
+        background-size: 600% 600%;
+        animation: gradient 25s ease infinite;
+        width: 93.8%;
+
+        display: block;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        color: rgb(255, 254, 254);
+        position: relative;
+        padding: 10px;
+        margin: auto;
+        width: 300px;
+        height: 400px;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-width: 100%;
+      }
+      .audio {
+        display: none;
+      }
+      .play {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      .bts {
+        position: relative;
+        padding: 10px;
+        width: 30px;
+        margin: 10px;
+        top: 90%;
+        transform: translateY(-100%);
+      }
+      .bts:hover {
+        border: rgba(255, 255, 255, 0.85);
+        filter: blur(1.9px);
+        width: 35px;
+      }
+
+      .banner {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        color: rgb(255, 254, 254);
+        width: 300px;
+        height: 300px;
+        border-radius: 70%;
+
+        -webkit-animation: spin 8s linear infinite;
+        -moz-animation: spin 8s linear infinite;
+        animation: spin 8s linear infinite;
+      }
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      .tx {
+        font-family: "Inter", sans-serif;
+        left: 80%;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      .tt {
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        text-align: center;
+        color: rgb(24, 24, 24);
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-right: -6%;
+      }
+      .tx:hover {
+        border: rgba(255, 255, 255, 0.85);
+        filter: blur(0.9px);
+      }
+      .tt:hover {
+        border: rgba(255, 255, 255, 0.85);
+        filter: blur(0.9px);
+      }
+
+      .tex {
+        text-align: center;
+
+        position: relative;
+      }
+      h3 {
+        opacity: 15%;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        border: rgba(255, 255, 255, 0.85);
+        filter: blur(0.9px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tex">
+      <h1 class="tx">Mac DeMarco</h1>
+      <h2 class="tt">Best Songs</h2>
+    </div>
+    <div class="container">
+      <audio id="audio1" class="audio" controls>
+        <source src="/audio/mac.mp3" />
+      </audio>
+      <img class="banner" src="/img/Mac-DeMarco.jpg" alt="" />
+
+      <div class="play">
+        <img
+          class="bts"
+          onclick="retroceder()"
+          src="/img/retroceder.png"
+          alt=""
+        />
+        <img class="bts" onclick="play()" src="/img/play.png" alt="" />
+        <img class="bts" onclick="avancar()" src="/img/avancar.jpg" alt="" />
+      </div>
+    </div>
+    <script src="/script.js"></script>
+    <h3>By Vinicios Ferreira</h3>
+  </body>
+</html>
